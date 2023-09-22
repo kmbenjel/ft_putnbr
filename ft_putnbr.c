@@ -41,7 +41,6 @@ void ft_putnbr(int nb)
 
 	if (nb < 0)
 		ft_putchar('-');
-
 	while (nb > 9 || nb < -9)
 	{
 		tens = ft_tens(nb);
@@ -49,10 +48,8 @@ void ft_putnbr(int nb)
 		nb %= ft_tens(nb);
 		ft_put_zeros(ft_abs(nb), tens / 10);
 	}
-
 	if (nb < 0)
 		nb = -nb;
-
 	ft_putchar(nb + '0');
 }
 
